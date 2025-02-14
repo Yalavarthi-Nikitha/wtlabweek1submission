@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1abd94;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6d819d;
+            padding: 10px 0;
+        }
+        nav a {
+            color: rgb(229, 176, 176);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #666;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #555;
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: 5px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <header>Welcome to Our Restaurant</header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    
+    <div class="container" id="menu">
+        <h2>Our Menu</h2>
+        <table>
+            <tr>
+                <th>Food Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Chicken Biryani</td>
+                <td>$12</td>
+                <td>Classic Italian pizza with fresh tomatoes, mozzarella, and basil.</td>
+            </tr>
+            <tr>
+                <td>Butter Chicken</td>
+                <td>$15</td>
+                <td>Rich and creamy Indian curry with tender chicken pieces.</td>
+            </tr>
+            <tr>
+                <td>Chicken Kebab</td>
+                <td>$10</td>
+                <td>Chinese-style stir-fried noodles with vegetables and soy sauce.</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="container" id="specialties">
+        <h2>Our Specialties</h2>
+        <ul>
+            <li>Authentic Italian Cuisine</li>
+            <li>Traditional Indian Dishes</li>
+            <li>Delicious Chinese Food</li>
+        </ul>
+    </div>
+</body>
+</html>

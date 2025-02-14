@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Profile Display & Colors</title>
+</head>
+<body>
+
+    <h2>Data Table</h2>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <tr>
+            <th style="background-color: #d1e7dd;">S.No</th>
+            <th style="background-color: #cfe2f3;">Name</th>
+            <th style="background-color: #f9f0c1;">Phone</th>
+            <th style="background-color: #f8d7da;">Address</th>
+            <th style="background-color: #e2d9f3;">Profile</th>
+            <th style="background-color: #ffe5b4;">Action</th>
+        </tr>
+        <tr>
+            <td style="background-color: #d1e7dd;">1</td>
+            <td style="background-color: #cfe2f3;">Riley</td>
+            <td style="background-color: #f9f0c1;">123-456-7890</td>
+            <td style="background-color: #f8d7da;">123 Main St</td>
+            <td style="background-color: #e2d9f3;"><a href="#" onclick="showProfile('Riley', '123-456-7890', '123 Main St', 'ouppy.jpg')">VIEW Profile</a></td>
+            <td style="background-color: #ffe5b4;"><button onclick="showImage('ouppy.jpg')">View Image</button></td>
+        </tr>
+        <tr>
+            <td style="background-color: #d1e7dd;">2</td>
+            <td style="background-color: #cfe2f3;">Olivia</td>
+            <td style="background-color: #f9f0c1;">987-654-3210</td>
+            <td style="background-color: #f8d7da;">456 Elm St</td>
+            <td style="background-color: #e2d9f3;"><a href="#" onclick="showProfile('Olivia', '987-654-3210', '456 Elm St', 'ouppy.jpg')">VIEW Profile</a></td>
+            <td style="background-color: #ffe5b4;"><button onclick="showImage('ouppy.jpg')">View Image</button></td>
+        </tr>
+        <tr>
+            <td style="background-color: #d1e7dd;">3</td>
+            <td style="background-color: #cfe2f3;">Buzz</td>
+            <td style="background-color: #f9f0c1;">987-654-3210</td>
+            <td style="background-color: #f8d7da;">789 Pine St</td>
+            <td style="background-color: #e2d9f3;"><a href="#" onclick="showProfile('Buzz', '987-654-3210', '789 Pine St', 'ouppy.jpg')">VIEW Profile</a></td>
+            <td style="background-color: #ffe5b4;"><button onclick="showImage('ouppy.jpg')">View Image</button></td>
+        </tr>
+        <tr>
+            <td style="background-color: #d1e7dd;">4</td>
+            <td style="background-color: #cfe2f3;">Rana</td>
+            <td style="background-color: #f9f0c1;">987-654-3210</td>
+            <td style="background-color: #f8d7da;">159 Oak St</td>
+            <td style="background-color: #e2d9f3;"><a href="#" onclick="showProfile('Rana', '987-654-3210', '159 Oak St', 'ouppy.jpg')">VIEW Profile</a></td>
+            <td style="background-color: #ffe5b4;"><button onclick="showImage('ouppy.jpg')">View Image</button></td>
+        </tr>
+    </table>
+
+    <!-- Profile Display Section -->
+    <div id="profileSection" style="display:none; margin-top: 20px; border: 1px solid #ccc; padding: 15px; background-color: #f5f5f5;">
+        <h2>Profile Details</h2>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+        <p><strong>Address:</strong> <span id="profileAddress"></span></p>
+        <p><strong>Profile Image:</strong></p>
+        <img id="profileImage" src="" alt="Profile Image" width="200px">
+    </div>
+
+    <!-- Modal for Image Popup -->
+    <div id="imageModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); text-align:center;">
+        <div class="modal-content" style="margin: 10% auto; padding: 20px; background: white; width: 300px; position: relative;">
+            <span class="close" onclick="closeModal()" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;">&times;</span>
+            <img id="popupImage" src="" width="300px">
+        </div>
+    </div>
+
+    <script>
+        function showProfile(name, phone, address, imageSrc) {
+            // Updating profile section with selected user data
+            document.getElementById("profileName").innerText = name;
+            document.getElementById("profilePhone").innerText = phone;
+            document.getElementById("profileAddress").innerText = address;
+            document.getElementById("profileImage").src = imageSrc;
+
+            // Display profile section
+            document.getElementById("profileSection").style.display = "block";
+        }
+
+        function showImage(imageSrc) {
+            document.getElementById('popupImage').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
